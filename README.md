@@ -12,6 +12,6 @@
 - (220209) [옵저버패턴 코드](RxSwift/RxSwiftTIL/a_ObserverPattern.playground/Contents.swift) vs  [Rx-PublishSubject 코드](RxSwift/RxSwiftTIL/a_WhyRx0.playground/Contents.swift) 
   - **그래서 왜 Rx?**
     - 1. 코드가 짧아지고 가독성이 좋아졌다.
-    - 2. onComplete, onError 등 종료 이벤트 처리가 쉽게 가능하다.
+    - 2. onCompleted, onError 등 종료 이벤트 처리가 쉽게 가능하다.
 
 ## SwiftUI
