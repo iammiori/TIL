@@ -6,7 +6,7 @@
 |**Observable**|[Observable.swift](RxSwift/RxSwiftTIL/0_CreateObservable.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-1a)|
 |**Disposables**|[Disposables.swift](RxSwift/RxSwiftTIL/0_CreateObservable.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-2.-Disposables)|
 |**Subject 언제쓸까 고민 1**|[WhySubject.swift](RxSwift/RxSwiftTIL/3_WhySubject.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-4.-Subject)|
-|**PublishSubject**|[PublishSubject.swift](RxSwift/RxSwiftTIL/1_Subject.playground/Contents.swift)|🛠  updating..|
+|**PublishSubject**|[PublishSubject.swift](RxSwift/RxSwiftTIL/1_PublishSubject.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-4-1.-PublishSubject)|
 |**BehaviorSubject**|[BehaviorSubject.swift](RxSwift/RxSwiftTIL/2_BehaviorSubject.playground/Contents.swift)|🛠  updating..|
 
 ### 그래서 왜 굳이 Rx를 써야할까에 대한 고민의 흔적 🐾🐾🐾🐾
