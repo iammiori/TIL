@@ -10,6 +10,7 @@
 |**BehaviorSubject**|[BehaviorSubject.swift](RxSwift/RxSwiftTIL/2_BehaviorSubject.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-4-2.-BehaviorSubject)|
 |**ReplaySubject**|[ReplaySubject.swift](RxSwift/RxSwiftTIL/4_ReplaySubject.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-4-3.-ReplaySubject)|
 |**AsyncSubject**|[AsyncSubject.swift](RxSwift/RxSwiftTIL/5_AsyncSubject.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-4-4.-AsyncSubject)|
+|**Relay 언제쓸까**||[✏️블로그정리](https://velog.io/@iammiori/RxSwift-5.-Relay)|
 
 ### 그래서 왜 굳이 Rx를 써야할까에 대한 고민의 흔적 🐾🐾🐾🐾
 - (220209) [옵저버패턴 코드](RxSwift/RxSwiftTIL/a_ObserverPattern.playground/Contents.swift) vs  [Rx-PublishSubject 코드](RxSwift/RxSwiftTIL/a_WhyRx0.playground/Contents.swift) 
