@@ -31,3 +31,11 @@ Observable.from(movements)
     .filter { $0.field == .gymnastics }
     .subscribe { print("🤸‍♀️gymnastics 동작은 \($0)") }
     .disposed(by: disposeBag)
+
+// Skip
+Observable.from(movements)
+    .skip(1)
+    .subscribe { print("skip 해버리기 : \($0)")}
+    .disposed(by: disposeBag)
+// output : toes to bar 부터 출력
+
