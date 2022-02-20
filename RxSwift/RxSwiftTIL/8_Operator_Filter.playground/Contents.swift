@@ -39,3 +39,19 @@ Observable.from(movements)
     .disposed(by: disposeBag)
 // output : toes to bar 부터 출력
 
+
+Observable.from(movements)
+    .skip(while: { $0.field != .weightlifting })
+    .subscribe { print("weightlifting 부터 출력해버리기 \($0)")}
+    .disposed(by: disposeBag)
+
+let triggerObservable = PublishSubject<Movement>()
+let movementObservable = PublishSubject<Movement>()
+
+movementObservable
+    .skip(until: triggerObservable)
+    .subscribe { print("trigger 이후부터 방출 :\($0)")}
+    .disposed(by: disposeBag)
+movementObservable.onNext(Movement(name: "box jump over", field: .uncertain))
+triggerObservable.onNext(Movement(name: "handstand walk", field: .gymnastics))
+movementObservable.onNext(Movement(name: "handstand push up", field: .gymnastics))
