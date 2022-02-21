@@ -23,10 +23,12 @@ class BindingVC: UIViewController {
         attribute()
         layout()
         
+        //MARK: Delegate 활용
         //myTF.delegate = self
+        
         myTF.becomeFirstResponder()
         
-        // rx
+        //MARK:  rx
         myTF.rx.text
             .map { [weak self] email -> String in
                 guard let text = email else { return "이메일 형식이 아닙니다 ☹️"}
@@ -50,6 +52,8 @@ extension BindingVC {
         myLabel.textAlignment = .center
         myTF.placeholder = "입력해주세요"
         myTF.borderStyle = .roundedRect
+        myTF.keyboardType = .emailAddress
+        myTF.autocapitalizationType = .none
         
     }
     private func layout(){
@@ -72,6 +76,7 @@ extension BindingVC {
     }
 }
 
+//MARK: Delegate 활용
 //extension BindingVC : UITextFieldDelegate {
 //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 //
