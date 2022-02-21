@@ -23,4 +23,10 @@
     - 1. 코드가 짧아졌다.
     - 2. onCompleted, onError 등 종료 이벤트 처리가 쉽게 가능하다.
 
+- (220221) [textfield를 입력한 값 valid 검사후 label에 결과 표시하기 코드 (delegate vs. rx)](RxSwift/RxSwiftTIL/RxSwiftTIL/BindingVC.swift)
+  - **그래서 왜 Rx?**   [✏️블로그정리](https://velog.io/@iammiori/RxSwift-8-2.-RxCocoa-Binding)
+    - 1. 코드가 단순해졌다.
+    - 2. delegate를 사용하지 않아도 된다.
+    - 3. 데이터 흐름과 변화가 직관적으로 보인다.
+
 ## SwiftUI
