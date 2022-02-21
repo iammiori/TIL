@@ -13,6 +13,9 @@
 |**Relay 언제쓸까**||[✏️블로그정리](https://velog.io/@iammiori/RxSwift-5.-Relay)|
 |**종류별 Relay**|[Relay.swift](RxSwift/RxSwiftTIL/6_Relay.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-5-1.-Relay-종류)|
 |**Operator-Create**|[CreateOperator.swift](RxSwift/RxSwiftTIL/7_Operator_Create.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-6-1.-Operators-Create)|
+|**Operator-Filter**|[FilterOperator.swift](RxSwift/RxSwiftTIL/8_Operator_Filter.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-6-1.-Operators-Filter)|
+|**Operator-Transforming**|[TransformingOperator.swift](RxSwift/RxSwiftTIL/9_Operator_Transforming.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-6-3.-Operators-Transforming)|
+|**Operator-Combine**|[CombineOperator.swift](RxSwift/RxSwiftTIL/10_Operator_Combine.playground/Contents.swift)|[✏️블로그정리](https://velog.io/@iammiori/RxSwift-6-4.-Operators-Combine)|
 
 ### 그래서 왜 굳이 Rx를 써야할까에 대한 고민의 흔적 🐾🐾🐾🐾
 - (220209) [옵저버패턴 코드](RxSwift/RxSwiftTIL/a_ObserverPattern.playground/Contents.swift) vs  [Rx-PublishSubject 코드](RxSwift/RxSwiftTIL/a_WhyRx0.playground/Contents.swift) 
