@@ -29,19 +29,20 @@ class DriverVC : UIViewController {
         
         //MARK:  rx
         // 드라이버는 시퀀스를 공유 share 필요없음
-        let result = myTF.rx.text //.asDriver()
+        let result = myTF.rx.text .asDriver()
             .map { self.checkEmail(email: $0)}
-            //.asDriver(onErrorJustReturn: false)
+            .asDriver(onErrorJustReturn: false)
         
         result
             .map { $0 ? "옳은 이메일 형식입니다 😀" : "이메일 형식이 아닙니다 ☹️"}
-            //.drive(myLabel.rx.text)
-            .bind(to: myLabel.rx.text)
+            .drive(myLabel.rx.text)
+            //.bind(to: myLabel.rx.text)
             .disposed(by: disposeBag)
         
         result
             .map { $0 ? UIColor.systemGreen : UIColor.systemRed}
-            .bind(to: myLabel.rx.textColor)
+            .drive(myLabel.rx.textColor)
+            //.bind(to: myLabel.rx.textColor)
             .disposed(by: disposeBag)
     }
 }
