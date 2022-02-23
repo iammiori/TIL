@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum Category {
-    case girlsName
-    case hero
+enum Category : String {
+    case girlsName = "Girl's Name"
+    case hero = "Hero"
 }
 struct CrossfitMovements {
     let category : Category
