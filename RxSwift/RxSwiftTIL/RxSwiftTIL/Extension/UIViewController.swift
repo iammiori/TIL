@@ -11,13 +11,14 @@ import RxCocoa
 
 extension UIViewController {
     // 하나의 액션을 표시하는 alert wrapping
-    func showAlert(title : String, message: String? = nil) -> Observable<ActionType> {
-        
+    func showAlert(title : String, message: String? = nil) -> Observable<String> {
+        //Observable<ActionType>
         return Observable.create { [weak self] observer in
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
                 // event 전달
-                observer.onNext(.ok)
+                observer.onNext(title)
+                //observer.onNext(.ok)
                 observer.onCompleted()
             }
             alertController.addAction(okAction)
