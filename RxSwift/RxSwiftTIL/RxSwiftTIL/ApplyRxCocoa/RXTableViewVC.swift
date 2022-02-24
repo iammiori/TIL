@@ -14,6 +14,7 @@ import RxCocoa
 class RXTableViewVC : UIViewController {
     
     let tableView = UITableView()
+    let filterBtn = UIButton()
     let disposeBag = DisposeBag()
     
     let allObservable = Observable.of(CrossfitWods)
@@ -31,19 +32,19 @@ class RXTableViewVC : UIViewController {
         }
         .disposed(by: disposeBag)
         
-//        // a
-//        tableView.rx.modelSelected(CrossfitMovements.self)
-//            .bind { wods in
-//                print(wods.name)
-//            }
-//            .disposed(by: disposeBag)
-//
-//        // b
-//        tableView.rx.itemSelected
-//            .bind { [weak self] indexPath in
-//                self?.tableView.deselectRow(at: indexPath, animated: false)
-//            }
-//            .disposed(by: disposeBag)
+        //        // a
+        //        tableView.rx.modelSelected(CrossfitMovements.self)
+        //            .bind { wods in
+        //                print(wods.name)
+        //            }
+        //            .disposed(by: disposeBag)
+        //
+        //        // b
+        //        tableView.rx.itemSelected
+        //            .bind { [weak self] indexPath in
+        //                self?.tableView.deselectRow(at: indexPath, animated: false)
+        //            }
+        //            .disposed(by: disposeBag)
         
         // a b zip 가능 (control event)
         Observable.zip (tableView.rx.modelSelected(CrossfitMovements.self), tableView.rx.itemSelected)
@@ -52,16 +53,33 @@ class RXTableViewVC : UIViewController {
                 print(wods.name)
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(CrossfitMovements.self)
+            .flatMap { [unowned self] wods in
+                self.showAlert(title: wods.name, message: wods.movements)
+            }
+            .subscribe(onNext : { actionType in
+                switch actionType {
+                case .ok :
+                    print("ok")
+                default :
+                    break
+                }
+            })
     }
 }
 
 extension RXTableViewVC {
     private func attribute(){
         self.title = "tableview에 rx연습"
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: filterBtn)
         view.backgroundColor = .white
+        
+        //filterBtn.setImage(UIImage(systemName: "list.bullet"), for: .normal )
         
         // cell register
         tableView.register(RXTableViewCell.self, forCellReuseIdentifier: RXTableViewCell.registerID)
+        
     }
     private func layout(){
         [tableView].forEach {self.view.addSubview($0)}
