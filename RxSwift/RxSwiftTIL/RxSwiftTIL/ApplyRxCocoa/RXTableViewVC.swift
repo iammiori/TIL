@@ -58,14 +58,17 @@ class RXTableViewVC : UIViewController {
             .flatMap { [unowned self] wods in
                 self.showAlert(title: wods.name, message: wods.movements)
             }
-            .subscribe(onNext : { actionType in
-                switch actionType {
-                case .ok :
-                    print("ok")
-                default :
-                    break
-                }
-            })
+            .bind(to: self.rx.title)
+            .disposed(by: disposeBag)
+//            .subscribe(onNext : { actionType in
+//                switch actionType {
+//                case .ok :
+//                    print("ok")
+//                default :
+//                    break
+//                }
+//            })
+        
     }
 }
 
