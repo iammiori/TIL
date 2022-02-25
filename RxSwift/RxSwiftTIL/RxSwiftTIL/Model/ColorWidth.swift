@@ -9,6 +9,6 @@ import UIKit
 
 struct ColorWidth {
     let color : UIColor
-    let width : Float
+    let width : CGFloat
 }
 
