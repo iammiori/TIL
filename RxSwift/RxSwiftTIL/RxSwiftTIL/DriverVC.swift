@@ -29,7 +29,7 @@ class DriverVC : UIViewController {
         
         //MARK:  rx
         // 드라이버는 시퀀스를 공유 share 필요없음
-        let result = myTF.rx.text .asDriver()
+        let result = myTF.rx.text.asDriver()
             .map { self.checkEmail(email: $0)}
             .asDriver(onErrorJustReturn: false)
         
