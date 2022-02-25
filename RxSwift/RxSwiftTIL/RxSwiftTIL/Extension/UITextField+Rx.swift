@@ -25,7 +25,7 @@ extension Reactive where Base : UITextField {
         //단축인자
         return Binder(self.base) {
             $0.layer.borderColor = $1?.color.cgColor
-            $0.layer.borderWidth = CGFloat($1?.width ?? 0.5)
+            $0.layer.borderWidth = $1?.width ?? 0.5
         }
         
     }
