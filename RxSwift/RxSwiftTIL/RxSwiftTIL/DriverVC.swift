@@ -24,7 +24,7 @@ class DriverVC : UIViewController {
         
         //MARK: Delegate 활용
         //myTF.delegate = self
-        
+        self.dismissKeyboardWhenTapBackGround()
         myTF.becomeFirstResponder()
         
         //MARK:  rx
@@ -44,6 +44,18 @@ class DriverVC : UIViewController {
             .drive(myLabel.rx.textColor)
             //.bind(to: myLabel.rx.textColor)
             .disposed(by: disposeBag)
+        
+        myTF.rx.beginEditing
+            .map { ColorWidth(color: .systemCyan, width: 2.0) }
+            .bind(to: myTF.rx.borderColorWidth)
+            .disposed(by: disposeBag)
+        
+        myTF.rx.endEditing
+            .map { ColorWidth(color: .systemGray, width: 0.5) }
+            .bind(to: myTF.rx.borderColorWidth)
+            .disposed(by: disposeBag)
+        
+
     }
 }
 
@@ -56,6 +68,8 @@ extension DriverVC {
         myTF.borderStyle = .roundedRect
         myTF.keyboardType = .emailAddress
         myTF.autocapitalizationType = .none
+        myTF.layer.borderWidth = 0.5
+        myTF.layer.cornerRadius = 8
         
     }
     private func layout(){
@@ -82,5 +96,20 @@ extension DriverVC {
             print("finish:\(email)")
         }
         return email.contains("@")
+    }
+}
+
+extension Reactive where Base : UITextField {
+    var beginEditing : ControlEvent<Void> {
+        return controlEvent(.editingDidBegin)
+    }
+    var endEditing : ControlEvent<Void> {
+        return controlEvent(.editingDidEnd)
+    }
+    var borderColorWidth : Binder<ColorWidth?> {
+        return Binder(self.base) { textfield, colorWidth in
+            textfield.layer.borderColor = colorWidth?.color.cgColor
+            textfield.layer.borderWidth = CGFloat( colorWidth?.width ?? 0.5)
+        }
     }
 }
