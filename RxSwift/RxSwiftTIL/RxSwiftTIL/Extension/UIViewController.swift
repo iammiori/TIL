@@ -56,4 +56,15 @@ extension UIViewController {
             }
         }
     }
+    
+    // MARK:  빈 view 눌렀을때 키보드가 내려가!
+    func dismissKeyboardWhenTapBackGround() {
+        let tap: UITapGestureRecognizer =
+            UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        self.view.endEditing(false)
+    }
 }
