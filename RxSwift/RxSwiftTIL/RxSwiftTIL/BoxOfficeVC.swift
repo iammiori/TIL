@@ -23,8 +23,10 @@ class BoxOfficeVC : UIViewController {
         
         //MARK: data -> cell에 뿌리기
         BoxOfficeNetwork().getBoxOffice()
+            //single -> Observable
             .asObservable()
             .share()
+            // 성공 값 value 꺼내기
             .compactMap { data -> BoxOfficeResponse? in
                 guard case let .success(value) = data
                 else {
@@ -32,7 +34,9 @@ class BoxOfficeVC : UIViewController {
                 }
                 return value
             }
+            // 꺼낸 response -> weeklyBoxOfficeList 변형
             .map { $0.boxOfficeResult.weeklyBoxOfficeList}
+            // drive로 셀에 뿌리기
             .asDriver(onErrorJustReturn: [])
             .drive(tableView.rx.items(cellIdentifier: BoxOfficeTableViewCell.registerID, cellType: BoxOfficeTableViewCell.self)) { [weak self] row, element, cell in
                 cell.setData(element)
