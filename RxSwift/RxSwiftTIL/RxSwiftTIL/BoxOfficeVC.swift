@@ -22,26 +22,26 @@ class BoxOfficeVC : UIViewController {
         layout()
         
         //MARK: data -> cell에 뿌리기
-        BoxOfficeNetwork().getBoxOffice()
-            //single -> Observable
-            .asObservable()
-            .share()
-            // 성공 값 value 꺼내기
-            .compactMap { data -> BoxOfficeResponse? in
-                guard case let .success(value) = data
-                else {
-                    return nil
-                }
-                return value
-            }
-            // 꺼낸 response -> weeklyBoxOfficeList 변형
-            .map { $0.boxOfficeResult.weeklyBoxOfficeList}
-            // drive로 셀에 뿌리기
-            .asDriver(onErrorJustReturn: [])
-            .drive(tableView.rx.items(cellIdentifier: BoxOfficeTableViewCell.registerID, cellType: BoxOfficeTableViewCell.self)) { [weak self] row, element, cell in
-                cell.setData(element)
-            }
-            .disposed(by: disposeBag)
+//        BoxOfficeNetwork().getBoxOffice()
+//            //single -> Observable
+//            .asObservable()
+//            .share()
+//            // 성공 값 value 꺼내기
+//            .compactMap { data -> BoxOfficeResponse? in
+//                guard case let .success(value) = data
+//                else {
+//                    return nil
+//                }
+//                return value
+//            }
+//            // 꺼낸 response -> weeklyBoxOfficeList 변형
+//            .map { $0.boxOfficeResult.weeklyBoxOfficeList}
+//            // drive로 셀에 뿌리기
+//            .asDriver(onErrorJustReturn: [])
+//            .drive(tableView.rx.items(cellIdentifier: BoxOfficeTableViewCell.registerID, cellType: BoxOfficeTableViewCell.self)) { [weak self] row, element, cell in
+//                cell.setData(element)
+//            }
+//            .disposed(by: disposeBag)
 
         
 //            .subscribe(onSuccess: { data in
@@ -75,6 +75,7 @@ extension BoxOfficeVC {
     
     func bind(_ viewModel : BoxOfficeViewModel) {
         //MARK: MVVM 합체
+        // viewModel에서 driver였던 detailListCellData 와 tableView.rx.items 합체
         viewModel.detailListCellData
             .drive(tableView.rx.items(cellIdentifier: BoxOfficeTableViewCell.registerID, cellType: BoxOfficeTableViewCell.self)) { [weak self] row, element, cell in
                 cell.setData(element)
