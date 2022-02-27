@@ -17,4 +17,6 @@ struct BoxOfficeDetail : Decodable {
 
 struct BoxOfficeList : Decodable {
     let movieNm : String
+    let rankOldAndNew : String
 }
+
