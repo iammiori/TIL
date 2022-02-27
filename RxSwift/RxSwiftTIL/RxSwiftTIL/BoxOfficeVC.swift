@@ -57,7 +57,7 @@ class BoxOfficeVC : UIViewController {
 
 extension BoxOfficeVC {
     private func attribute(){
-        self.title = "Rx + URLSession"
+        self.title = "Rx + URLSession + MVVM"
         view.backgroundColor = .white
         
         tableView.register(BoxOfficeTableViewCell.self, forCellReuseIdentifier: BoxOfficeTableViewCell.registerID)
