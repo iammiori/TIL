@@ -14,6 +14,7 @@ class BoxOfficeVC : UIViewController {
     
     let disposeBag = DisposeBag()
     let tableView = UITableView()
+    let filterBtn = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,7 @@ class BoxOfficeVC : UIViewController {
 //                print("에러 : \(error)")
 //            })
 //            .disposed(by: disposeBag)
-
+        
         
     }
 }
@@ -59,6 +60,9 @@ extension BoxOfficeVC {
     private func attribute(){
         self.title = "Rx + URLSession + MVVM"
         view.backgroundColor = .white
+        
+        filterBtn.setImage(UIImage(systemName: "list.bullet"), for: .normal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: filterBtn)
         
         tableView.register(BoxOfficeTableViewCell.self, forCellReuseIdentifier: BoxOfficeTableViewCell.registerID)
         
@@ -80,6 +84,10 @@ extension BoxOfficeVC {
             .drive(tableView.rx.items(cellIdentifier: BoxOfficeTableViewCell.registerID, cellType: BoxOfficeTableViewCell.self)) { [weak self] row, element, cell in
                 cell.setData(element)
             }
+            .disposed(by: disposeBag)
+        
+        filterBtn.rx.tap
+            .bind(to: viewModel.filterBtnTapped)
             .disposed(by: disposeBag)
     }
 }
