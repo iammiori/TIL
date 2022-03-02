@@ -55,6 +55,8 @@ class BoxOfficeTableViewCell : UITableViewCell {
         
         if dataEntity.rankOldAndNew == "NEW" {
             oldnewLabel.textColor = .orange
+        } else {
+            oldnewLabel.textColor = .black
         }
     }
 }
