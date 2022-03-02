@@ -20,7 +20,7 @@ struct BoxOfficeAPI {
         
         components.queryItems = [
             URLQueryItem(name: "key", value: Secret.openAPIKEY),
-        URLQueryItem(name: "targetDt", value: "20220228")
+        URLQueryItem(name: "targetDt", value: "20220303")
         ]
         return components
     }

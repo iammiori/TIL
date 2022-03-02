@@ -16,7 +16,9 @@ struct BoxOfficeViewModel {
     // 받아온값
     let apiData = PublishSubject<[BoxOfficeList]>()
     let filterBtnTapped = PublishRelay<Void>()
-    init(_ networkModel : BoxOfficeNetwork = BoxOfficeNetwork(), boxOfficeModel : BoxOfficeModel = BoxOfficeModel()) {
+    let backGroundViewModel = BoxOfficeBackGroundViewModel()
+    let boxOfficeModel = BoxOfficeModel()
+    init(_ networkModel : BoxOfficeNetwork = BoxOfficeNetwork()) {
         
         var cnt : Int = 0
         //네트워크값 observable로
@@ -69,6 +71,11 @@ struct BoxOfficeViewModel {
 
         self.detailListCellData = apiData
             .asDriver(onErrorJustReturn: [])
+        
+        //apiData 없으면 background view label hidden 제거
+        apiData.map { !$0.isEmpty }
+        .bind(to: backGroundViewModel.shouldHideStatusLabel )
+        .disposed(by: disposeBag)
     
     }
 }
