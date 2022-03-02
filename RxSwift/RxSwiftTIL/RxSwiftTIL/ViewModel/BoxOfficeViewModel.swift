@@ -36,7 +36,7 @@ struct BoxOfficeViewModel {
         
         // respose 형태 중 weeklyBoxOfficeList로 map
         let cellData = boxOfficeResultValue
-            .map { $0.boxOfficeResult.weeklyBoxOfficeList }
+            .map { $0.boxOfficeResult.dailyBoxOfficeList }
         
         
 //        let cellDataNew = cellData.map { element in
