@@ -16,7 +16,7 @@ struct BoxOfficeViewModel {
     // 받아온값
     let apiData = PublishSubject<[BoxOfficeList]>()
     let filterBtnTapped = PublishRelay<Void>()
-    init(_ networkModel : BoxOfficeNetwork = BoxOfficeNetwork()) {
+    init(_ networkModel : BoxOfficeNetwork = BoxOfficeNetwork(), boxOfficeModel : BoxOfficeModel = BoxOfficeModel()) {
         
         var cnt : Int = 0
         //네트워크값 observable로
@@ -56,18 +56,9 @@ struct BoxOfficeViewModel {
             }
             .startWith(0)
 
-        func goFilter(type : Int, data : [BoxOfficeList]) -> [BoxOfficeList] {
-            if type == 0 {
-                return data
-            } else {
-                return data.filter {
-                    $0.rankOldAndNew == "NEW"
-                }
-            }
-        }
 
         Observable
-            .combineLatest(outputData, cellData, resultSelector: goFilter)
+            .combineLatest(outputData, cellData, resultSelector: boxOfficeModel.goFilter)
             .bind(to: apiData)
             .disposed(by: disposeBag)
         
