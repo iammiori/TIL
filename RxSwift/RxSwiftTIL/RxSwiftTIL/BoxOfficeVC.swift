@@ -15,6 +15,7 @@ class BoxOfficeVC : UIViewController {
     let disposeBag = DisposeBag()
     let tableView = UITableView()
     let filterBtn = UIButton()
+    let boxOfficeBackGroundView = BoxOfficeBackGroundView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,8 @@ extension BoxOfficeVC {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: filterBtn)
         
         tableView.register(BoxOfficeTableViewCell.self, forCellReuseIdentifier: BoxOfficeTableViewCell.registerID)
+        
+        tableView.backgroundView = boxOfficeBackGroundView
         
     }
     private func layout(){
