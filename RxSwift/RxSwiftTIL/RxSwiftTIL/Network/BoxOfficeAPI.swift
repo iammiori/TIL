@@ -10,7 +10,7 @@ import Foundation
 struct BoxOfficeAPI {
     static let scheme = "https"
     static let host = "kobis.or.kr"
-    static let path = "/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json"
+    static let path = "/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
     
     func getBoxOffice() -> URLComponents {
         var components = URLComponents()
@@ -20,7 +20,7 @@ struct BoxOfficeAPI {
         
         components.queryItems = [
             URLQueryItem(name: "key", value: Secret.openAPIKEY),
-        URLQueryItem(name: "targetDt", value: "20220217")
+        URLQueryItem(name: "targetDt", value: "20220228")
         ]
         return components
     }

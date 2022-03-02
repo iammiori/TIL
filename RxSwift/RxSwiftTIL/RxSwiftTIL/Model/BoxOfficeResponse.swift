@@ -12,7 +12,7 @@ struct BoxOfficeResponse : Decodable {
 }
 
 struct BoxOfficeDetail : Decodable {
-    let weeklyBoxOfficeList : [BoxOfficeList]
+    let dailyBoxOfficeList : [BoxOfficeList]
 }
 
 struct BoxOfficeList : Decodable {
