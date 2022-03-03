@@ -74,7 +74,7 @@ struct BoxOfficeViewModel {
         
         //apiData 없으면 background view label hidden 제거
         apiData.map { !$0.isEmpty }
-        .bind(to: backGroundViewModel.shouldHideStatusLabel )
+        .bind(to: backGroundViewModel.shouldHideNoticeEmptyLabel )
         .disposed(by: disposeBag)
     
     }

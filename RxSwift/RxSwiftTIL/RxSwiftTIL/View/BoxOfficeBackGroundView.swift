@@ -11,7 +11,7 @@ import RxCocoa
 
 class BoxOfficeBackGroundView : UIView {
     let disposeBag = DisposeBag()
-    let statusLabel = UILabel()
+    let noticeEmptyLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,21 +26,21 @@ class BoxOfficeBackGroundView : UIView {
     
     func bind(_ viewModel : BoxOfficeBackGroundViewModel) {
         //뷰모델에서 가져온 isStatusLabelHidden값을 rx.isHidden과 연결
-        viewModel.isStatusLabelHidden
-            .emit(to: statusLabel.rx.isHidden)
+        viewModel.isNoticeEmptyLabelHidden
+            .emit(to: noticeEmptyLabel.rx.isHidden)
             .disposed(by: disposeBag)
     }
     
     private func attribute(){
         backgroundColor = .white
-        statusLabel.text = "🛠\n아직 업데이트 되지 않았어요"
-        statusLabel.textAlignment = .center
-        statusLabel.numberOfLines = 0
+        noticeEmptyLabel.text = "🛠\n아직 업데이트 되지 않았어요"
+        noticeEmptyLabel.textAlignment = .center
+        noticeEmptyLabel.numberOfLines = 0
     }
     
     private func layout(){
-        addSubview(statusLabel)
-        statusLabel.snp.makeConstraints {
+        addSubview(noticeEmptyLabel)
+        noticeEmptyLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
         }
