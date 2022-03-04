@@ -71,7 +71,7 @@ extension BoxOfficeVC {
         
     }
     private func layout(){
-        [tableView].forEach {self.view.addSubview($0)}
+        self.view.addSubview(tableView)
         
         tableView.snp.makeConstraints {
             $0.centerX.leading.trailing.equalToSuperview()
