@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
-import NSObject_Rx
+//import NSObject_Rx
 
 /*
  //MARK: NSObject_Rx 라이브러리 써서 disposeBag 자동생성 가능
@@ -20,7 +20,7 @@ class DriverVC : UIViewController {
     let myLabel = UILabel()
     let myTF = UITextField()
     
-    //let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,23 +42,23 @@ class DriverVC : UIViewController {
             .map { $0 ? "옳은 이메일 형식입니다 😀" : "이메일 형식이 아닙니다 ☹️"}
             .drive(myLabel.rx.text)
             //.bind(to: myLabel.rx.text)
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
         result
             .map { $0 ? UIColor.systemGreen : UIColor.systemRed}
             .drive(myLabel.rx.textColor)
             //.bind(to: myLabel.rx.textColor)
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
         myTF.rx.beginEditing
             .map { ColorWidth(color: .systemCyan, width: 2.0) }
             .bind(to: myTF.rx.borderColorWidth)
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
         myTF.rx.endEditing
             .map { ColorWidth(color: .systemGray, width: 0.5) }
             .bind(to: myTF.rx.borderColorWidth)
-            .disposed(by: rx.disposeBag)
+            .disposed(by: disposeBag)
         
 
     }
