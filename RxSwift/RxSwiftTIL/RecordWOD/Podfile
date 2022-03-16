@@ -12,6 +12,7 @@ target 'RecordWOD' do
     pod 'NSObject+Rx'
     pod 'RxDataSources'
     pod 'RxCoreData'
+    pod 'SnapKit'
    
   target 'RecordWODTests' do
     inherit! :search_paths
