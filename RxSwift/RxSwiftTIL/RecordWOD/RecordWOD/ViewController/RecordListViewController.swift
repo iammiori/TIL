@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 import SnapKit
 
-class RecordListViewController : UIViewController {
+class RecordListViewController : UIViewController , ViewModelBindableType {
+    
+    var viewModel: RecordListViewModel!
+    
+    func bindViewModel() {
+        
+    }
     
     let btn = UIButton()
     

@@ -7,7 +7,13 @@
 
 import UIKit
 
-class DetailRecordViewController: UIViewController {
+class DetailRecordViewController: UIViewController, ViewModelBindableType {
+    
+    var viewModel: DetailRecordViewModel!
+    
+    func bindViewModel() {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
