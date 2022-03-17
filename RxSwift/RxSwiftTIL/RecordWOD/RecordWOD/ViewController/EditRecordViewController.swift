@@ -7,8 +7,14 @@
 
 import UIKit
 
-class EditRecordViewController: UIViewController {
+class EditRecordViewController: UIViewController, ViewModelBindableType {
+    
+    var viewModel: EditRecordViewModel!
 
+    func bindViewModel() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
