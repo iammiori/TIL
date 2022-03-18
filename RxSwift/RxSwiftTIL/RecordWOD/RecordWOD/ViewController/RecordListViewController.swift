@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class RecordListViewController : UIViewController , ViewModelBindableType {
     
@@ -17,14 +19,21 @@ class RecordListViewController : UIViewController , ViewModelBindableType {
         
     }
     
-    let btn = UIButton()
+
+    let tableView = UITableView()
     
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         attribute()
         layout()
         
-        btn.addTarget(self, action: #selector(goNext), for: .touchUpInside)
+//        btn.rx.tap
+//            .bind {
+//            self.navigationController?.pushViewController(DetailRecordViewController(), animated: false)
+//            }
+//            .disposed(by: disposeBag )
+        
     }
 }
 
@@ -33,19 +42,17 @@ extension RecordListViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "운동 기록 🏋🏻‍♀️"
         self.view.backgroundColor = .white
-        btn.setTitleColor(.systemBlue, for: .normal)
-        btn.setTitle("넘어갓", for: .normal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        tableView.register(RecordListTableViewCell.self, forCellReuseIdentifier: RecordListTableViewCell.registerID)
     }
     
     private func layout() {
-        [btn].forEach { self.view.addSubview($0)}
+        self.view.addSubview(tableView)
         
-        btn.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
+        tableView.snp.makeConstraints {
+            $0.centerX.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(8)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
         }
-    }
-    
-    @objc func goNext() {
-        self.navigationController?.pushViewController(DetailRecordViewController(), animated: false)
     }
 }
