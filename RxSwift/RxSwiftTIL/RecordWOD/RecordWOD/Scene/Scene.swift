@@ -27,16 +27,32 @@ extension Scene {
             guard var listVC = nav.viewControllers.first as? RecordListViewController else {
                 fatalError()
             }
-            listVC.bind(viewModel: recordListViewModel)
+            //tableview LargeTitle error 수정
+            DispatchQueue.main.async {
+                listVC.bind(viewModel: recordListViewModel)
+            }
+            
             return nav
         case .detail(let detailRecordViewModel):
             var detailVC = DetailRecordViewController()
-            detailVC.bind(viewModel: detailRecordViewModel)
+            //tableview LargeTitle error 수정
+            DispatchQueue.main.async {
+                detailVC.bind(viewModel: detailRecordViewModel)
+            }
+            
             return detailVC
         case .edit(let editRecordViewModel):
-            var editVC = EditRecordViewController()
-            editVC.bind(viewModel: editRecordViewModel)
-            return editVC
+            let nav = UINavigationController()
+            let editView = EditRecordViewController()
+            nav.viewControllers = [editView]
+            guard var editVC = nav.viewControllers.first as? EditRecordViewController else {
+                fatalError()
+            }
+            DispatchQueue.main.async {
+                editVC.bind(viewModel: editRecordViewModel)
+            }
+            
+            return nav
         }
     }
 }
