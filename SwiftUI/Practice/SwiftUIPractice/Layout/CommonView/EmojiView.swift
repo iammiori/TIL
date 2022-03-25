@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmojiView: View {
     let emoji : String
-    let emojiArr : [String] = ["🏋🏻‍♀️","🤸‍♀️","🚀","👩🏻‍💻","☄️"]
+    let emojiArr : [String] = ["🏋🏻‍♀️","🤸‍♀️","🥊","🤺","🍔","🍕","🌮","🍣"]
     
     init(number: Int) {
         self.emoji = emojiArr[number % 5]

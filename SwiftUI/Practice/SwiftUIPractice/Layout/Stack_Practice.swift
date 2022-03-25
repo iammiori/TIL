@@ -33,6 +33,7 @@ struct Stack_Practice: View {
                             //stack은 포함된 모든 뷰를 동시에 초기화
                             //문제 : 서버통신 이미지 다운로드 ...
                             //해결 : LaztStaxk
+                            //하지만 보통은 LazyGrid 더 사용
                             ForEach(1..<101) { num in
                                 EmojiView(number: num)
                             }
