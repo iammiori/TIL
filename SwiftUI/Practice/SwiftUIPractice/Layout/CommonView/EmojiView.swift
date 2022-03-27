@@ -12,7 +12,7 @@ struct EmojiView: View {
     let emojiArr : [String] = ["🏋🏻‍♀️","🤸‍♀️","🥊","🤺","🍔","🍕","🌮","🍣"]
     
     init(number: Int) {
-        self.emoji = emojiArr[number % 5]
+        self.emoji = emojiArr[number % 8]
         print("EmojiView \(number) initialized")
     }
     
@@ -27,6 +27,6 @@ struct EmojiView: View {
 
 struct NumberView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiView(number: 1)
+        EmojiView(number: 8)
     }
 }
