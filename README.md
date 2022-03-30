@@ -32,3 +32,7 @@
     - 3. 데이터 흐름과 변화가 직관적으로 보인다.
 
 ## SwiftUI
+- swiftUI 요소 사용해보기
+   - stack
+   - scroll
+   - form
