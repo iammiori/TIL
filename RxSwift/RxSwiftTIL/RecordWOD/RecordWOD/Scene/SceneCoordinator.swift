@@ -18,8 +18,6 @@ class SceneCoordinator : SceneCoordinatorType {
     
     required init(window : UIWindow) {
         self.window = window
-        let rootViewController = RecordListViewController()
-        window.rootViewController = UINavigationController(rootViewController: rootViewController)
         currentVC = window.rootViewController!
     }
     
