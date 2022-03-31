@@ -1,0 +1,892 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D17711A27E78D0F00A0A850 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17711927E78D0F00A0A850 /* TransitionModel.swift */; };
+		3D17711C27E78D8300A0A850 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17711B27E78D8300A0A850 /* Scene.swift */; };
+		3D17711E27E791A600A0A850 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17711D27E791A600A0A850 /* SceneCoordinatorType.swift */; };
+		3D17712027E7928000A0A850 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17711F27E7928000A0A850 /* SceneCoordinator.swift */; };
+		3D17712227E796CE00A0A850 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17712127E796CE00A0A850 /* CommonViewModel.swift */; };
+		3D4113C827DCC6810056E6FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113C727DCC6810056E6FC /* AppDelegate.swift */; };
+		3D4113CA27DCC6810056E6FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113C927DCC6810056E6FC /* SceneDelegate.swift */; };
+		3D4113D227DCC6810056E6FC /* RecordWOD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113D027DCC6810056E6FC /* RecordWOD.xcdatamodeld */; };
+		3D4113D427DCC6820056E6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4113D327DCC6820056E6FC /* Assets.xcassets */; };
+		3D4113D727DCC6820056E6FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4113D527DCC6820056E6FC /* LaunchScreen.storyboard */; };
+		3D4113E227DCC6820056E6FC /* RecordWODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113E127DCC6820056E6FC /* RecordWODTests.swift */; };
+		3D4113EC27DCC6820056E6FC /* RecordWODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113EB27DCC6820056E6FC /* RecordWODUITests.swift */; };
+		3D4113EE27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113ED27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift */; };
+		3D8A370327DF8B2B006C11D0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A370227DF8B2B006C11D0 /* Record.swift */; };
+		3DE7708727E4B9A700EB4D3E /* RecordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE7708627E4B9A700EB4D3E /* RecordListTableViewCell.swift */; };
+		3DE846A027E2508300FAD5D5 /* RecordStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8469F27E2508300FAD5D5 /* RecordStorageType.swift */; };
+		3DE846A427E2523000FAD5D5 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A327E2523000FAD5D5 /* MemoryStorage.swift */; };
+		3DE846A627E25A1600FAD5D5 /* RecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A527E25A1600FAD5D5 /* RecordListViewController.swift */; };
+		3DE846A827E25C9700FAD5D5 /* DetailRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A727E25C9700FAD5D5 /* DetailRecordViewController.swift */; };
+		3DE846AA27E2605600FAD5D5 /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A927E2605600FAD5D5 /* EditRecordViewController.swift */; };
+		3DF0F19627E30F1D00775FFB /* RecordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19527E30F1D00775FFB /* RecordListViewModel.swift */; };
+		3DF0F19827E30F5800775FFB /* DetailRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19727E30F5800775FFB /* DetailRecordViewModel.swift */; };
+		3DF0F19A27E30F7700775FFB /* EditRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19927E30F7700775FFB /* EditRecordViewModel.swift */; };
+		3DF0F19C27E30FB900775FFB /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19B27E30FB900775FFB /* ViewModelBindableType.swift */; };
+		60B535786E1992B2473AEDF1 /* Pods_RecordWOD_RecordWODUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047DB6671ED7C7B08338EABE /* Pods_RecordWOD_RecordWODUITests.framework */; };
+		6C0B4B55673BB60975919584 /* Pods_RecordWODTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DD6731D341D32C3CD5CCAE /* Pods_RecordWODTests.framework */; };
+		93285AA3B15B3BBEAF67461A /* Pods_RecordWOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7211E1692220E0112585DBDE /* Pods_RecordWOD.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D4113DE27DCC6820056E6FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4113BC27DCC6810056E6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4113C327DCC6810056E6FC;
+			remoteInfo = RecordWOD;
+		};
+		3D4113E827DCC6820056E6FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4113BC27DCC6810056E6FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4113C327DCC6810056E6FC;
+			remoteInfo = RecordWOD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		047DB6671ED7C7B08338EABE /* Pods_RecordWOD_RecordWODUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecordWOD_RecordWODUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D679B66B753F745800003D /* Pods-RecordWODTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordWODTests.debug.xcconfig"; path = "Target Support Files/Pods-RecordWODTests/Pods-RecordWODTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C00816C95CCDC02FBEEA7BE /* Pods-RecordWOD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordWOD.release.xcconfig"; path = "Target Support Files/Pods-RecordWOD/Pods-RecordWOD.release.xcconfig"; sourceTree = "<group>"; };
+		3D17711927E78D0F00A0A850 /* TransitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
+		3D17711B27E78D8300A0A850 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		3D17711D27E791A600A0A850 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		3D17711F27E7928000A0A850 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		3D17712127E796CE00A0A850 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		3D4113C427DCC6810056E6FC /* RecordWOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordWOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4113C727DCC6810056E6FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D4113C927DCC6810056E6FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3D4113D127DCC6810056E6FC /* RecordWOD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecordWOD.xcdatamodel; sourceTree = "<group>"; };
+		3D4113D327DCC6820056E6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D4113D627DCC6820056E6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D4113D827DCC6820056E6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4113DD27DCC6820056E6FC /* RecordWODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordWODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4113E127DCC6820056E6FC /* RecordWODTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWODTests.swift; sourceTree = "<group>"; };
+		3D4113E727DCC6820056E6FC /* RecordWODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordWODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4113EB27DCC6820056E6FC /* RecordWODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWODUITests.swift; sourceTree = "<group>"; };
+		3D4113ED27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWODUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D8A370227DF8B2B006C11D0 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		3DE7708627E4B9A700EB4D3E /* RecordListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListTableViewCell.swift; sourceTree = "<group>"; };
+		3DE8469F27E2508300FAD5D5 /* RecordStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageType.swift; sourceTree = "<group>"; };
+		3DE846A327E2523000FAD5D5 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		3DE846A527E25A1600FAD5D5 /* RecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewController.swift; sourceTree = "<group>"; };
+		3DE846A727E25C9700FAD5D5 /* DetailRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordViewController.swift; sourceTree = "<group>"; };
+		3DE846A927E2605600FAD5D5 /* EditRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
+		3DF0F19527E30F1D00775FFB /* RecordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewModel.swift; sourceTree = "<group>"; };
+		3DF0F19727E30F5800775FFB /* DetailRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordViewModel.swift; sourceTree = "<group>"; };
+		3DF0F19927E30F7700775FFB /* EditRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewModel.swift; sourceTree = "<group>"; };
+		3DF0F19B27E30FB900775FFB /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
+		6E51E3559E687EF0F2C5D956 /* Pods-RecordWOD-RecordWODUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordWOD-RecordWODUITests.release.xcconfig"; path = "Target Support Files/Pods-RecordWOD-RecordWODUITests/Pods-RecordWOD-RecordWODUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7211E1692220E0112585DBDE /* Pods_RecordWOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecordWOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6DD6731D341D32C3CD5CCAE /* Pods_RecordWODTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecordWODTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED29C1BD5FE80F6D64D59872 /* Pods-RecordWOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordWOD.debug.xcconfig"; path = "Target Support Files/Pods-RecordWOD/Pods-RecordWOD.debug.xcconfig"; sourceTree = "<group>"; };
+		F32FD973182E865A5FC7B3E6 /* Pods-RecordWODTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordWODTests.release.xcconfig"; path = "Target Support Files/Pods-RecordWODTests/Pods-RecordWODTests.release.xcconfig"; sourceTree = "<group>"; };
+		F365D84129DE84AE4A99D780 /* Pods-RecordWOD-RecordWODUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordWOD-RecordWODUITests.debug.xcconfig"; path = "Target Support Files/Pods-RecordWOD-RecordWODUITests/Pods-RecordWOD-RecordWODUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D4113C127DCC6810056E6FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93285AA3B15B3BBEAF67461A /* Pods_RecordWOD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4113DA27DCC6820056E6FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0B4B55673BB60975919584 /* Pods_RecordWODTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4113E427DCC6820056E6FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60B535786E1992B2473AEDF1 /* Pods_RecordWOD_RecordWODUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3743241B6622DD04AF3AC16B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7211E1692220E0112585DBDE /* Pods_RecordWOD.framework */,
+				047DB6671ED7C7B08338EABE /* Pods_RecordWOD_RecordWODUITests.framework */,
+				C6DD6731D341D32C3CD5CCAE /* Pods_RecordWODTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D17711827E78CFE00A0A850 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				3D17711927E78D0F00A0A850 /* TransitionModel.swift */,
+				3D17711B27E78D8300A0A850 /* Scene.swift */,
+				3D17711D27E791A600A0A850 /* SceneCoordinatorType.swift */,
+				3D17711F27E7928000A0A850 /* SceneCoordinator.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		3D4113BB27DCC6810056E6FC = {
+			isa = PBXGroup;
+			children = (
+				3D4113C627DCC6810056E6FC /* RecordWOD */,
+				3D4113E027DCC6820056E6FC /* RecordWODTests */,
+				3D4113EA27DCC6820056E6FC /* RecordWODUITests */,
+				3D4113C527DCC6810056E6FC /* Products */,
+				45801B7346DF533CCA78B3F9 /* Pods */,
+				3743241B6622DD04AF3AC16B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D4113C527DCC6810056E6FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D4113C427DCC6810056E6FC /* RecordWOD.app */,
+				3D4113DD27DCC6820056E6FC /* RecordWODTests.xctest */,
+				3D4113E727DCC6820056E6FC /* RecordWODUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D4113C627DCC6810056E6FC /* RecordWOD */ = {
+			isa = PBXGroup;
+			children = (
+				3D17711827E78CFE00A0A850 /* Scene */,
+				3DE7708527E4B98800EB4D3E /* Cell */,
+				3D4113FD27DCCFDD0056E6FC /* Model */,
+				3D4113FC27DCCFD10056E6FC /* ViewController */,
+				3D4113FB27DCCFC50056E6FC /* ViewModel */,
+				3D4113FA27DCCFC00056E6FC /* Service */,
+				3DE846A127E251F900FAD5D5 /* MemoryStorage */,
+				3DE846A227E2520600FAD5D5 /* CoreDataStorage */,
+				3D4113C727DCC6810056E6FC /* AppDelegate.swift */,
+				3D4113C927DCC6810056E6FC /* SceneDelegate.swift */,
+				3D4113D327DCC6820056E6FC /* Assets.xcassets */,
+				3D4113D527DCC6820056E6FC /* LaunchScreen.storyboard */,
+				3D4113D827DCC6820056E6FC /* Info.plist */,
+				3D4113D027DCC6810056E6FC /* RecordWOD.xcdatamodeld */,
+			);
+			path = RecordWOD;
+			sourceTree = "<group>";
+		};
+		3D4113E027DCC6820056E6FC /* RecordWODTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4113E127DCC6820056E6FC /* RecordWODTests.swift */,
+			);
+			path = RecordWODTests;
+			sourceTree = "<group>";
+		};
+		3D4113EA27DCC6820056E6FC /* RecordWODUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4113EB27DCC6820056E6FC /* RecordWODUITests.swift */,
+				3D4113ED27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift */,
+			);
+			path = RecordWODUITests;
+			sourceTree = "<group>";
+		};
+		3D4113FA27DCCFC00056E6FC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3DE8469F27E2508300FAD5D5 /* RecordStorageType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3D4113FB27DCCFC50056E6FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DF0F19527E30F1D00775FFB /* RecordListViewModel.swift */,
+				3DF0F19727E30F5800775FFB /* DetailRecordViewModel.swift */,
+				3DF0F19927E30F7700775FFB /* EditRecordViewModel.swift */,
+				3DF0F19B27E30FB900775FFB /* ViewModelBindableType.swift */,
+				3D17712127E796CE00A0A850 /* CommonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3D4113FC27DCCFD10056E6FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DE846A527E25A1600FAD5D5 /* RecordListViewController.swift */,
+				3DE846A727E25C9700FAD5D5 /* DetailRecordViewController.swift */,
+				3DE846A927E2605600FAD5D5 /* EditRecordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3D4113FD27DCCFDD0056E6FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A370227DF8B2B006C11D0 /* Record.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DE7708527E4B98800EB4D3E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DE7708627E4B9A700EB4D3E /* RecordListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3DE846A127E251F900FAD5D5 /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				3DE846A327E2523000FAD5D5 /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		3DE846A227E2520600FAD5D5 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		45801B7346DF533CCA78B3F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED29C1BD5FE80F6D64D59872 /* Pods-RecordWOD.debug.xcconfig */,
+				3C00816C95CCDC02FBEEA7BE /* Pods-RecordWOD.release.xcconfig */,
+				F365D84129DE84AE4A99D780 /* Pods-RecordWOD-RecordWODUITests.debug.xcconfig */,
+				6E51E3559E687EF0F2C5D956 /* Pods-RecordWOD-RecordWODUITests.release.xcconfig */,
+				29D679B66B753F745800003D /* Pods-RecordWODTests.debug.xcconfig */,
+				F32FD973182E865A5FC7B3E6 /* Pods-RecordWODTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D4113C327DCC6810056E6FC /* RecordWOD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4113F127DCC6820056E6FC /* Build configuration list for PBXNativeTarget "RecordWOD" */;
+			buildPhases = (
+				8C6B4F95A179B26BEF09D8FE /* [CP] Check Pods Manifest.lock */,
+				3D4113C027DCC6810056E6FC /* Sources */,
+				3D4113C127DCC6810056E6FC /* Frameworks */,
+				3D4113C227DCC6810056E6FC /* Resources */,
+				65FDB3002C10366C4BA402F8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecordWOD;
+			productName = RecordWOD;
+			productReference = 3D4113C427DCC6810056E6FC /* RecordWOD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D4113DC27DCC6820056E6FC /* RecordWODTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4113F427DCC6820056E6FC /* Build configuration list for PBXNativeTarget "RecordWODTests" */;
+			buildPhases = (
+				1C02A79B8CA22E0AE3456E41 /* [CP] Check Pods Manifest.lock */,
+				3D4113D927DCC6820056E6FC /* Sources */,
+				3D4113DA27DCC6820056E6FC /* Frameworks */,
+				3D4113DB27DCC6820056E6FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4113DF27DCC6820056E6FC /* PBXTargetDependency */,
+			);
+			name = RecordWODTests;
+			productName = RecordWODTests;
+			productReference = 3D4113DD27DCC6820056E6FC /* RecordWODTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D4113E627DCC6820056E6FC /* RecordWODUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4113F727DCC6820056E6FC /* Build configuration list for PBXNativeTarget "RecordWODUITests" */;
+			buildPhases = (
+				051E3299787136893EE661C0 /* [CP] Check Pods Manifest.lock */,
+				3D4113E327DCC6820056E6FC /* Sources */,
+				3D4113E427DCC6820056E6FC /* Frameworks */,
+				3D4113E527DCC6820056E6FC /* Resources */,
+				2FB90CFE2D9526F10D7D8FAD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4113E927DCC6820056E6FC /* PBXTargetDependency */,
+			);
+			name = RecordWODUITests;
+			productName = RecordWODUITests;
+			productReference = 3D4113E727DCC6820056E6FC /* RecordWODUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D4113BC27DCC6810056E6FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					3D4113C327DCC6810056E6FC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					3D4113DC27DCC6820056E6FC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 3D4113C327DCC6810056E6FC;
+					};
+					3D4113E627DCC6820056E6FC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 3D4113C327DCC6810056E6FC;
+					};
+				};
+			};
+			buildConfigurationList = 3D4113BF27DCC6810056E6FC /* Build configuration list for PBXProject "RecordWOD" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D4113BB27DCC6810056E6FC;
+			productRefGroup = 3D4113C527DCC6810056E6FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D4113C327DCC6810056E6FC /* RecordWOD */,
+				3D4113DC27DCC6820056E6FC /* RecordWODTests */,
+				3D4113E627DCC6820056E6FC /* RecordWODUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D4113C227DCC6810056E6FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4113D727DCC6820056E6FC /* LaunchScreen.storyboard in Resources */,
+				3D4113D427DCC6820056E6FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4113DB27DCC6820056E6FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4113E527DCC6820056E6FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		051E3299787136893EE661C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecordWOD-RecordWODUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C02A79B8CA22E0AE3456E41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecordWODTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FB90CFE2D9526F10D7D8FAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecordWOD-RecordWODUITests/Pods-RecordWOD-RecordWODUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecordWOD-RecordWODUITests/Pods-RecordWOD-RecordWODUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecordWOD-RecordWODUITests/Pods-RecordWOD-RecordWODUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65FDB3002C10366C4BA402F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecordWOD/Pods-RecordWOD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecordWOD/Pods-RecordWOD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecordWOD/Pods-RecordWOD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6B4F95A179B26BEF09D8FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecordWOD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D4113C027DCC6810056E6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D17712227E796CE00A0A850 /* CommonViewModel.swift in Sources */,
+				3DE846A827E25C9700FAD5D5 /* DetailRecordViewController.swift in Sources */,
+				3DE846AA27E2605600FAD5D5 /* EditRecordViewController.swift in Sources */,
+				3DF0F19827E30F5800775FFB /* DetailRecordViewModel.swift in Sources */,
+				3D17711A27E78D0F00A0A850 /* TransitionModel.swift in Sources */,
+				3D17711C27E78D8300A0A850 /* Scene.swift in Sources */,
+				3DF0F19C27E30FB900775FFB /* ViewModelBindableType.swift in Sources */,
+				3DE846A427E2523000FAD5D5 /* MemoryStorage.swift in Sources */,
+				3DE846A627E25A1600FAD5D5 /* RecordListViewController.swift in Sources */,
+				3D4113C827DCC6810056E6FC /* AppDelegate.swift in Sources */,
+				3D17712027E7928000A0A850 /* SceneCoordinator.swift in Sources */,
+				3DF0F19627E30F1D00775FFB /* RecordListViewModel.swift in Sources */,
+				3D17711E27E791A600A0A850 /* SceneCoordinatorType.swift in Sources */,
+				3DE7708727E4B9A700EB4D3E /* RecordListTableViewCell.swift in Sources */,
+				3D4113CA27DCC6810056E6FC /* SceneDelegate.swift in Sources */,
+				3D8A370327DF8B2B006C11D0 /* Record.swift in Sources */,
+				3DF0F19A27E30F7700775FFB /* EditRecordViewModel.swift in Sources */,
+				3DE846A027E2508300FAD5D5 /* RecordStorageType.swift in Sources */,
+				3D4113D227DCC6810056E6FC /* RecordWOD.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4113D927DCC6820056E6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4113E227DCC6820056E6FC /* RecordWODTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4113E327DCC6820056E6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4113EE27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift in Sources */,
+				3D4113EC27DCC6820056E6FC /* RecordWODUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D4113DF27DCC6820056E6FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4113C327DCC6810056E6FC /* RecordWOD */;
+			targetProxy = 3D4113DE27DCC6820056E6FC /* PBXContainerItemProxy */;
+		};
+		3D4113E927DCC6820056E6FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4113C327DCC6810056E6FC /* RecordWOD */;
+			targetProxy = 3D4113E827DCC6820056E6FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D4113D527DCC6820056E6FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4113D627DCC6820056E6FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D4113EF27DCC6820056E6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D4113F027DCC6820056E6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D4113F227DCC6820056E6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED29C1BD5FE80F6D64D59872 /* Pods-RecordWOD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecordWOD/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios-RxSwift.RecordWOD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D4113F327DCC6820056E6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C00816C95CCDC02FBEEA7BE /* Pods-RecordWOD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecordWOD/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios-RxSwift.RecordWOD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D4113F527DCC6820056E6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29D679B66B753F745800003D /* Pods-RecordWODTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios-RxSwift.RecordWODTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecordWOD.app/RecordWOD";
+			};
+			name = Debug;
+		};
+		3D4113F627DCC6820056E6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32FD973182E865A5FC7B3E6 /* Pods-RecordWODTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios-RxSwift.RecordWODTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecordWOD.app/RecordWOD";
+			};
+			name = Release;
+		};
+		3D4113F827DCC6820056E6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F365D84129DE84AE4A99D780 /* Pods-RecordWOD-RecordWODUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios-RxSwift.RecordWODUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecordWOD;
+			};
+			name = Debug;
+		};
+		3D4113F927DCC6820056E6FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E51E3559E687EF0F2C5D956 /* Pods-RecordWOD-RecordWODUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GLQQLN3R4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios-RxSwift.RecordWODUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecordWOD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D4113BF27DCC6810056E6FC /* Build configuration list for PBXProject "RecordWOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4113EF27DCC6820056E6FC /* Debug */,
+				3D4113F027DCC6820056E6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4113F127DCC6820056E6FC /* Build configuration list for PBXNativeTarget "RecordWOD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4113F227DCC6820056E6FC /* Debug */,
+				3D4113F327DCC6820056E6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4113F427DCC6820056E6FC /* Build configuration list for PBXNativeTarget "RecordWODTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4113F527DCC6820056E6FC /* Debug */,
+				3D4113F627DCC6820056E6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4113F727DCC6820056E6FC /* Build configuration list for PBXNativeTarget "RecordWODUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4113F827DCC6820056E6FC /* Debug */,
+				3D4113F927DCC6820056E6FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3D4113D027DCC6810056E6FC /* RecordWOD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D4113D127DCC6810056E6FC /* RecordWOD.xcdatamodel */,
+			);
+			currentVersion = 3D4113D127DCC6810056E6FC /* RecordWOD.xcdatamodel */;
+			path = RecordWOD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3D4113BC27DCC6810056E6FC /* Project object */;
+}
