@@ -20,7 +20,7 @@ class RecordListTableViewCell: UITableViewCell {
     
     override init(style : UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        attribute()
         layout()
     }
     
@@ -39,9 +39,13 @@ class RecordListTableViewCell: UITableViewCell {
             $0.top.equalToSuperview().offset(12)
             $0.leading.equalToSuperview().offset(10)
             $0.bottom.equalToSuperview().inset(12)
+            $0.trailing.equalToSuperview().inset(30)
         }
     }
     
+    func setData(_ dataEntity : Record) {
+        mainLabel.text = dataEntity.record
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
