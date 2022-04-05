@@ -28,6 +28,29 @@ class RecordListViewController : UIViewController , ViewModelBindableType {
             .disposed(by: disposeBag)
         
         addBtn.rx.action = viewModel.makeCreateAction()
+        
+        //선택 이벤트
+        // itemSelected -> 인덱스. 내용 -> model
+        /*
+         - rxswift5 : 클로저에서 vc 접근할때  [unowned self] 클로저 캡처리스트필요
+         - rxswift6 : 다르게 구현 가능
+         */
+        Observable.zip(tableView.rx.modelSelected(Record.self), tableView.rx.itemSelected)
+        //rxswift5
+//            .do(onNext: { [unowned self] (_, indexPath) in
+//                self.tableView.deselectRow(at: indexPath, animated: true)
+//            })
+        //rxswift6
+        //withUnretained연산자 추가후 파라미터로 self 전달, self에 대한 비소유 참조와 zip 연산자가 방출하는 요소가 다시 하나의 튜플로 합쳐져서 방출 -> 클로저캡처리스트 삭제 가능
+        // 튜플의 요소는 (self, indexpath) - > (vc, zip연산자가 방출한 data)
+            .withUnretained(self)
+            .do(onNext: { (vc, data) in
+                vc.tableView.deselectRow(at: data.1, animated: true)
+            })
+                .map { $1.0 } //인덱스 이제 필요없으니까 선택한 메모로만 변경
+                .bind(to: viewModel.detailAction.inputs)
+                .disposed(by: disposeBag)
+    
     }
     
 
