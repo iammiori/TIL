@@ -45,4 +45,21 @@ class RecordListViewModel : CommonViewModel {
             return self.storage.deleteRecord(record: record).map { _ in }
         }
     }
+    
+    //MARK: 속성형태로
+    //입력형식 : Record 출력형식 : Void
+    //클로저 내부에서 self로 접근해야하므로 lazy
+    lazy var detailAction : Action<Record, Void> = {
+        
+        return Action { record in
+            let detailViewModel = DetailRecordViewModel(record: record, title: "기록 보기", sceneCoordinator: self.sceneCoordinator, storage: self.storage)
+            
+            let detailScene = Scene.detail(detailViewModel)
+            
+            return self.sceneCoordinator.transition(to: detailScene, using: .push, animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }()
+    
 }
