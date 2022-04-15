@@ -10,10 +10,10 @@ import RxSwift
 
 class DetailRecordViewController: UIViewController, ViewModelBindableType {
     
-    let toolBar = UIToolbar()
-    let toolBarTrashBtn = UIButton()
-    let toolBarWirteBtn = UIButton()
-    let toolBarActionBtn = UIButton()
+    lazy var toolBar = UIToolbar()
+    var toolBarTrashBtn = UIButton()
+    var toolBarWirteBtn = UIButton()
+    var toolBarActionBtn = UIButton()
     let tableView = UITableView()
     var viewModel: DetailRecordViewModel!
     let disposeBag = DisposeBag()
@@ -46,6 +46,25 @@ class DetailRecordViewController: UIViewController, ViewModelBindableType {
                 }
             }
             .disposed(by: disposeBag)
+        //MARK: subject 가 다시 방출하도록 수정 해야 데이터도 수정
+        
+        toolBarWirteBtn.rx.action = viewModel.makeEditAction()
+//        toolBarActionBtn.rx.action =
+        
+//        toolBarActionBtn.rx.tap
+//            .throttle(.microseconds(500), scheduler: MainScheduler.instance)
+//            .withUnretained(self)
+//            .subscribe(onNext: { (vc, _) in
+//                let record = vc.viewModel.record.record
+//
+//                let shareVC = UIActivityViewController(activityItems: [record], applicationActivities: nil)
+//                vc.present(shareVC, animated: true, completion: nil)
+//            })
+//            .disposed(by: disposeBag)
+        
+        toolBarActionBtn.rx.action = viewModel.openShareAction()
+
+        toolBarTrashBtn.rx.action = viewModel.makeDeleteAction()
         
 //        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
 //        viewModel.title
@@ -84,7 +103,8 @@ extension DetailRecordViewController {
     private func layout() {
         [toolBar,tableView].forEach { self.view.addSubview($0) }
         toolBar.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
+            //$0.leading.trailing.equalToSuperview()
+            $0.width.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         tableView.snp.makeConstraints {
@@ -94,6 +114,7 @@ extension DetailRecordViewController {
     }
     
     private func setToolBar() {
+        toolBar = UIToolbar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.bounds.width, height: CGFloat(44))))
         toolBarTrashBtn.tintColor = .red
         toolBarTrashBtn.setImage(UIImage(systemName: "trash"), for: .normal)
         toolBarWirteBtn.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
