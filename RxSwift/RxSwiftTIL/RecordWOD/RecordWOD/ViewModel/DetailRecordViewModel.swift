@@ -14,7 +14,7 @@ class DetailRecordViewModel : CommonViewModel {
     
     //이전 scene에서 전달된 record 저장
     let record : Record
-    
+    let disposeBag = DisposeBag()
     private var formatter : DateFormatter = {
         let f = DateFormatter()
         f.locale = Locale(identifier: "ko_kr")
@@ -39,4 +39,47 @@ class DetailRecordViewModel : CommonViewModel {
             .asObservable()
             .map { _ in }
     }
+    
+    func performUpdate(record : Record) -> Action<String, Void> {
+        return Action { input in
+            self.storage.updateRecord(record: record, newRecord: input)
+                .map { [$0.record, self.formatter.string(from: $0.recordDate)]}
+                .bind(onNext: {self.contents.onNext($0)})
+                .disposed(by: self.disposeBag)
+            return Observable.empty()
+        }
+    }
+    
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let editViewModel = EditRecordViewModel(title: "기록 편집", content: self.record.record, sceneCoordinator: self.sceneCoordinator, storage: self.storage, saveAction: self.performUpdate(record: self.record))
+            
+            let eidtScene = Scene.edit(editViewModel)
+            
+            return self.sceneCoordinator.transition(to: eidtScene, using: .modal, animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
+    
+    func openShareAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let shareVC = Scene.share(self.record.record)
+            return self.sceneCoordinator.transition(to: shareVC, using: .modal, animated: true)
+                .asObservable()
+                .throttle(.microseconds(500), scheduler: MainScheduler.instance)
+                .map { _ in }
+        }
+    }
+    
+    func makeDeleteAction() -> CocoaAction {
+        return Action { input in
+            self.storage.deleteRecord(record: self.record)
+            
+            return self.sceneCoordinator.close(animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
+
 }
