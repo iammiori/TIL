@@ -21,12 +21,15 @@
 		3D4113EC27DCC6820056E6FC /* RecordWODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113EB27DCC6820056E6FC /* RecordWODUITests.swift */; };
 		3D4113EE27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4113ED27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift */; };
 		3D8A370327DF8B2B006C11D0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A370227DF8B2B006C11D0 /* Record.swift */; };
+		3DAE98D62808B27900788B64 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE98D52808B27900788B64 /* CoreDataStorage.swift */; };
+		3DB2456B27F6D66000504C67 /* DetailRecordDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2456A27F6D66000504C67 /* DetailRecordDateCell.swift */; };
 		3DE7708727E4B9A700EB4D3E /* RecordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE7708627E4B9A700EB4D3E /* RecordListTableViewCell.swift */; };
 		3DE846A027E2508300FAD5D5 /* RecordStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8469F27E2508300FAD5D5 /* RecordStorageType.swift */; };
 		3DE846A427E2523000FAD5D5 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A327E2523000FAD5D5 /* MemoryStorage.swift */; };
 		3DE846A627E25A1600FAD5D5 /* RecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A527E25A1600FAD5D5 /* RecordListViewController.swift */; };
 		3DE846A827E25C9700FAD5D5 /* DetailRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A727E25C9700FAD5D5 /* DetailRecordViewController.swift */; };
 		3DE846AA27E2605600FAD5D5 /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE846A927E2605600FAD5D5 /* EditRecordViewController.swift */; };
+		3DED6DEC27F78995006DCED2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DED6DEB27F78995006DCED2 /* UIViewController.swift */; };
 		3DF0F19627E30F1D00775FFB /* RecordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19527E30F1D00775FFB /* RecordListViewModel.swift */; };
 		3DF0F19827E30F5800775FFB /* DetailRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19727E30F5800775FFB /* DetailRecordViewModel.swift */; };
 		3DF0F19A27E30F7700775FFB /* EditRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0F19927E30F7700775FFB /* EditRecordViewModel.swift */; };
@@ -75,12 +78,15 @@
 		3D4113EB27DCC6820056E6FC /* RecordWODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWODUITests.swift; sourceTree = "<group>"; };
 		3D4113ED27DCC6820056E6FC /* RecordWODUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWODUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D8A370227DF8B2B006C11D0 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		3DAE98D52808B27900788B64 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		3DB2456A27F6D66000504C67 /* DetailRecordDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordDateCell.swift; sourceTree = "<group>"; };
 		3DE7708627E4B9A700EB4D3E /* RecordListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListTableViewCell.swift; sourceTree = "<group>"; };
 		3DE8469F27E2508300FAD5D5 /* RecordStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorageType.swift; sourceTree = "<group>"; };
 		3DE846A327E2523000FAD5D5 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		3DE846A527E25A1600FAD5D5 /* RecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewController.swift; sourceTree = "<group>"; };
 		3DE846A727E25C9700FAD5D5 /* DetailRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordViewController.swift; sourceTree = "<group>"; };
 		3DE846A927E2605600FAD5D5 /* EditRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
+		3DED6DEB27F78995006DCED2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3DF0F19527E30F1D00775FFB /* RecordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewModel.swift; sourceTree = "<group>"; };
 		3DF0F19727E30F5800775FFB /* DetailRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordViewModel.swift; sourceTree = "<group>"; };
 		3DF0F19927E30F7700775FFB /* EditRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		3D4113C627DCC6810056E6FC /* RecordWOD */ = {
 			isa = PBXGroup;
 			children = (
+				3DED6DE927F7897F006DCED2 /* Config */,
 				3D17711827E78CFE00A0A850 /* Scene */,
 				3DE7708527E4B98800EB4D3E /* Cell */,
 				3D4113FD27DCCFDD0056E6FC /* Model */,
@@ -180,7 +187,6 @@
 				3D4113D327DCC6820056E6FC /* Assets.xcassets */,
 				3D4113D527DCC6820056E6FC /* LaunchScreen.storyboard */,
 				3D4113D827DCC6820056E6FC /* Info.plist */,
-				3D4113D027DCC6810056E6FC /* RecordWOD.xcdatamodeld */,
 			);
 			path = RecordWOD;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE7708627E4B9A700EB4D3E /* RecordListTableViewCell.swift */,
+				3DB2456A27F6D66000504C67 /* DetailRecordDateCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -259,8 +266,26 @@
 		3DE846A227E2520600FAD5D5 /* CoreDataStorage */ = {
 			isa = PBXGroup;
 			children = (
+				3D4113D027DCC6810056E6FC /* RecordWOD.xcdatamodeld */,
+				3DAE98D52808B27900788B64 /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		3DED6DE927F7897F006DCED2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3DED6DEA27F78986006DCED2 /* Extension */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3DED6DEA27F78986006DCED2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3DED6DEB27F78995006DCED2 /* UIViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		45801B7346DF533CCA78B3F9 /* Pods */ = {
@@ -527,9 +552,12 @@
 				3D17712027E7928000A0A850 /* SceneCoordinator.swift in Sources */,
 				3DF0F19627E30F1D00775FFB /* RecordListViewModel.swift in Sources */,
 				3D17711E27E791A600A0A850 /* SceneCoordinatorType.swift in Sources */,
+				3DB2456B27F6D66000504C67 /* DetailRecordDateCell.swift in Sources */,
+				3DED6DEC27F78995006DCED2 /* UIViewController.swift in Sources */,
 				3DE7708727E4B9A700EB4D3E /* RecordListTableViewCell.swift in Sources */,
 				3D4113CA27DCC6810056E6FC /* SceneDelegate.swift in Sources */,
 				3D8A370327DF8B2B006C11D0 /* Record.swift in Sources */,
+				3DAE98D62808B27900788B64 /* CoreDataStorage.swift in Sources */,
 				3DF0F19A27E30F7700775FFB /* EditRecordViewModel.swift in Sources */,
 				3DE846A027E2508300FAD5D5 /* RecordStorageType.swift in Sources */,
 				3D4113D227DCC6810056E6FC /* RecordWOD.xcdatamodeld in Sources */,
