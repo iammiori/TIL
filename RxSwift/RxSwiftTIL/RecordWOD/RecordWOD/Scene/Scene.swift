@@ -13,6 +13,7 @@ enum Scene {
     case list(RecordListViewModel)
     case detail(DetailRecordViewModel)
     case edit(EditRecordViewModel)
+    case share(String)
 }
 
 extension Scene {
@@ -53,6 +54,11 @@ extension Scene {
             }
             
             return nav
+            
+        case .share(let record) :
+            let shareVC = UIActivityViewController(activityItems: [record], applicationActivities: nil)
+            return shareVC
         }
+        
     }
 }
