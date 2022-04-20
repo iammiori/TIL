@@ -14,7 +14,8 @@ protocol RecordStorageType {
     func createRecord(record : String) -> Observable<Record>
     
     @discardableResult
-    func readRecord() -> Observable<[Record]>
+    //func readRecord() -> Observable<[Record]>
+    func readRecord() -> Observable<[RecordSctionModel]>
     
     @discardableResult
     func updateRecord(record : Record, newRecord : String) -> Observable<Record>

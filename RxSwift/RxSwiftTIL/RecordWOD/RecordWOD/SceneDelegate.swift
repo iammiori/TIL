@@ -24,7 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //guard let _ = (scene as? UIWindowScene) else { return }
         
-        let storage = MemoryStorage()
+        //let storage = MemoryStorage()
+        let storage = CoreDataStorage(modelName: "RecordWOD")
         let coordinator = SceneCoordinator(window: window!)
         
         let recordListViewModel = RecordListViewModel(title: "운동 기록 🚀🏋🏻‍♀️", sceneCoordinator: coordinator, storage: storage)
@@ -61,7 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        //(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 
