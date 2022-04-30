@@ -67,7 +67,7 @@ class DetailRecordViewModel : CommonViewModel {
             let shareVC = Scene.share(self.record.record)
             return self.sceneCoordinator.transition(to: shareVC, using: .modal, animated: true)
                 .asObservable()
-                .throttle(.microseconds(500), scheduler: MainScheduler.instance)
+//                .throttle(.microseconds(500), scheduler: MainScheduler.instance)
                 .map { _ in }
         }
     }
