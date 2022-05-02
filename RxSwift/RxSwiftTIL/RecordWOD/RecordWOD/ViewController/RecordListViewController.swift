@@ -21,11 +21,17 @@ class RecordListViewController : UIViewController , ViewModelBindableType {
             .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
         
+//        viewModel.recordList
+//            .bind(to: tableView.rx.items(cellIdentifier: RecordListTableViewCell.registerID, cellType: RecordListTableViewCell.self)) { [weak self] row, element, cell in
+//                cell.setData(element)
+//            }
+//            .disposed(by: disposeBag)
+        
+    
         viewModel.recordList
-            .bind(to: tableView.rx.items(cellIdentifier: RecordListTableViewCell.registerID, cellType: RecordListTableViewCell.self)) { [weak self] row, element, cell in
-                cell.setData(element)
-            }
+            .bind(to : tableView.rx.items(dataSource: viewModel.datasoruce))
             .disposed(by: disposeBag)
+        //두개 이상의 섹션, 편집기능 구현해야한다면 rxdatasource or cocoatouch
         
         addBtn.rx.action = viewModel.makeCreateAction()
         
@@ -50,6 +56,11 @@ class RecordListViewController : UIViewController , ViewModelBindableType {
                 .map { $1.0 } //인덱스 이제 필요없으니까 선택한 메모로만 변경
                 .bind(to: viewModel.detailAction.inputs)
                 .disposed(by: disposeBag)
+        
+        tableView.rx.modelDeleted(Record.self)
+            .throttle(.microseconds(500), scheduler: MainScheduler.instance)
+            .bind(to: viewModel.deleteAction.inputs)
+            .disposed(by: disposeBag)
     
     }
     
@@ -68,6 +79,7 @@ class RecordListViewController : UIViewController , ViewModelBindableType {
 //            .disposed(by: disposeBag )
         
     }
+    
 }
 
 extension RecordListViewController {
