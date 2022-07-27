@@ -14,6 +14,10 @@ struct Label_Practice: View {
                 Image(systemName: "person")
                 Text("Profile")
             }
+            .font(.system(.largeTitle, design: .monospaced))
+            
+            Label("label 활용", systemImage: "person")
+                .font(.system(.largeTitle, design: .rounded))
             .font(.largeTitle)
             
             Label("label 활용", systemImage: "person")
@@ -31,11 +35,16 @@ struct Label_Practice: View {
                             .foregroundColor(.black)
                     }
                 Text("Clean & Jerk")
+
+                    .font(.system(.title2, design: .serif).smallCaps())
+                    .fontWeight(.medium)
+                    .strikethrough()
                     .font(.largeTitle)
             }
             
             Label {
                 Text("label 활용 c&j")
+                    .font(.system(size: 20, weight: .black, design: .rounded))
             } icon: {
                 Image("cj")
                     .resizable()
