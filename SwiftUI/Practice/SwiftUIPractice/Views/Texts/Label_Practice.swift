@@ -35,11 +35,14 @@ struct Label_Practice: View {
                             .foregroundColor(.black)
                     }
                 Text("Clean & Jerk")
-
+                    .font(.system(.title2, design: .serif).smallCaps())
+                    .fontWeight(.medium)
+                    .strikethrough()
                     .font(.system(.title2, design: .serif).smallCaps())
                     .fontWeight(.medium)
                     .strikethrough()
                     .font(.largeTitle)
+
             }
             
             Label {
