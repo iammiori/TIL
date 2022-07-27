@@ -14,10 +14,10 @@ struct Label_Practice: View {
                 Image(systemName: "person")
                 Text("Profile")
             }
-            .font(.largeTitle)
+            .font(.system(.largeTitle, design: .monospaced))
             
             Label("label 활용", systemImage: "person")
-                .font(.largeTitle)
+                .font(.system(.largeTitle, design: .rounded))
             
             HStack {
                 Image("cj")
@@ -31,11 +31,14 @@ struct Label_Practice: View {
                             .foregroundColor(.black)
                     }
                 Text("Clean & Jerk")
-                    .font(.largeTitle)
+                    .font(.system(.title2, design: .serif).smallCaps())
+                    .fontWeight(.medium)
+                    .strikethrough()
             }
             
             Label {
                 Text("label 활용 c&j")
+                    .font(.system(size: 20, weight: .black, design: .rounded))
             } icon: {
                 Image("cj")
                     .resizable()
