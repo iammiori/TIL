@@ -13,7 +13,8 @@ import RxCocoa
 class DetailRecordViewModel : CommonViewModel {
     
     //이전 scene에서 전달된 record 저장
-    let record : Record
+//    let record : Record
+    var record: Record
     let disposeBag = DisposeBag()
     private var formatter : DateFormatter = {
         let f = DateFormatter()
@@ -40,9 +41,15 @@ class DetailRecordViewModel : CommonViewModel {
             .map { _ in }
     }
     
+    //MARK: 편집내용 업데이트 위해 메모 속성 업데이트 필요
+    /*
+     - 1. let memo -> var memo
+     */
     func performUpdate(record : Record) -> Action<String, Void> {
         return Action { input in
             self.storage.updateRecord(record: record, newRecord: input)
+            //새롭게 방출된 record를 record속성에 저장
+                .do(onNext: { self.record = $0 })
                 .map { [$0.record, self.formatter.string(from: $0.recordDate)]}
                 .bind(onNext: {self.contents.onNext($0)})
                 .disposed(by: self.disposeBag)
