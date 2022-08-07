@@ -34,6 +34,36 @@ class EditRecordViewController: UIViewController, ViewModelBindableType {
             .withLatestFrom(textView.rx.text.orEmpty)
             .bind(to: viewModel.saveAction.inputs)
             .disposed(by: disposeBag)
+        
+        //keyboard will show
+        //notification메소드로 처리할 notification이름을 전달하면,
+        //해당 notification이 전달되는 시점마다 next event를
+        //방출하는 옵저버블을 리턴
+        //next event에는 notification 객체 저장되어있음
+        let willSHowObservable = NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
+        //옵셔널 자동 언랩핑하기위해 compactMap
+            .compactMap { $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue }
+            .map { $0.cgRectValue.height }
+        
+        //키보드가 사라질때는 추가한 여백 제거하면 되므로 0을 방출
+        let willHideObservable = NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification)
+            .map { noti -> CGFloat in 0 }
+        
+        let keyboardObservable = Observable.merge(willSHowObservable, willHideObservable)
+            .share()
+        
+        keyboardObservable
+            .withUnretained(textView)
+            .subscribe(onNext: { tv, height in
+                var inset = tv.contentInset
+                inset.bottom = height
+                tv.contentInset = inset
+                //스크롤 인디케이터
+                var scrollInset = tv.verticalScrollIndicatorInsets
+                scrollInset.bottom = height
+                tv.verticalScrollIndicatorInsets = scrollInset
+            })
+            .disposed(by: disposeBag)
     }
     
     override func viewDidLoad() {
